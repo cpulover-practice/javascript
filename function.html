@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    Your name: <input type="text" id="name">
+    <button id="submit">Submit</button>
+    <script>
+        document.getElementById("submit").onclick = greeting;
+
+        // define a function
+        function greeting(){
+            var name = document.getElementById("name").value
+            alert(`Hello ${name}`);
+        }
+    </script>
+</body>
+</html>
