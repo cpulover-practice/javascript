@@ -4,7 +4,7 @@
 - ```document.getElementById("<id>").style.<attribute>```: change style
   - No hyphen ```-``` in JavaScript, e.g. ```font-size``` => ```fontSize```
   - ```style.display="none"``` to remove the element
-- ```document.getElementById("<id>").value```: retrieve value of ```<input>```
+- ```document.getElementById("<id>").value```: retrieve value of ```<input>```, ```<select>```
 - Array 
 [[variable-array]()]
   - Add element to the end of array: ```push()```
@@ -15,3 +15,4 @@
 # Notes - Tips 
 - JavaScript code can be typed and execute in the console section of the browser development tool
 - Debug in the console section of the browser development tool
+- [HTML] Generate HTML template in VSCode: type ! => Enter

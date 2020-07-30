@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Flow</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <input type="text" id="username" placeholder="Enter username">
+    <input type="text" id="password" placeholder="Enter password">
+    <p><i>Hint: username is password, password is username</i></p>
+    <button id="submit">Submit</button>
+    <script type="text/javascript">
+        document.getElementById("submit").onclick = function () {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            console.log(`Username: ${username}, password: ${password}`);
+
+            if(username=="password"&&password=="username"){
+                alert("Login successfully!");
+            } else {
+                alert("Wrong username or password!");
+            }
+        }
+    </script>
+</body>
+
+</html>
