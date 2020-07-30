@@ -18,8 +18,14 @@
     <p id="text3"></p>
     <button id="button3">Create text</button>
 
+    <p id="text4">This text is not stylized ... yet</p>
+    <button id="button4">Stylize text</button>    
+
+    <p id="text5">This is Spiderman</p>
+    <button id="button5">Thanosize him</button>  
+
     <script>
-        // Internal Java Script 
+        // Internal JavaScript 
         document.getElementById("button1").onclick = function () {
             document.getElementById("text1").innerHTML = 'Hello you!';
         }
@@ -30,6 +36,15 @@
 
         document.getElementById('button3').onclick=function(){
             document.getElementById("text3").innerHTML = '<h2>Umbala!</h2>';
+        }
+
+        document.getElementById('button4').onclick=function(){
+            document.getElementById("text4").style.color = "red";
+            document.getElementById("text4").style.fontSize = "30px";
+        }
+
+        document.getElementById('button5').onclick=function(){
+            document.getElementById("text5").style.display = "none";
         }
     </script>
 </body>
