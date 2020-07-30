@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello world</title>
+</head>
+
+<body>
+    <!-- Inline JavaScript -->
+    <button onclick="alert('Hello, world!')">Click me!</button>
+
+    <p id="text1">Hello world!</p>
+    <button id="button1">Change text</button>
+
+    <p id="text2">JavaScript is ... </p>
+    <button id="button2">Append text</button>
+
+    <p id="text3"></p>
+    <button id="button3">Create text</button>
+
+    <script>
+        // Internal Java Script 
+        document.getElementById("button1").onclick = function () {
+            document.getElementById("text1").innerHTML = 'Hello you!';
+        }
+
+        document.getElementById('button2').onclick=function(){
+            document.getElementById("text2").innerHTML += 'noise';
+        }
+
+        document.getElementById('button3').onclick=function(){
+            document.getElementById("text3").innerHTML = '<h2>Umbala!</h2>';
+        }
+    </script>
+</body>
+
+</html>
