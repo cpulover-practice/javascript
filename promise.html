@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+    <script>
+        let completed = true;
+
+        let learnJS = new Promise(function (resolve, reject) {
+            if (completed) {
+                resolve("I have completed learning JS.");
+            } else {
+                reject("I haven't completed learning JS yet.");
+            }
+        });
+
+        //chainning callback if promise is resolved
+        learnJS.then(result => console.log(`After async 1: ${result}`));
+        learnJS.then(function (result) {
+            console.log(`After async 2: ${result}`)
+        });
+
+        //return "I have completed learning JS." to firstHandler()
+        learnJS.then(result => firstHandler(result))
+            //return "I have completed learning JS. hihi" to secondHandler()
+            .then(firstHandlerResult => secondHandler(firstHandlerResult))
+            //return "I have completed learning JS.hihi haha" and print out
+            .then(secondHandlerResult => console.log(secondHandlerResult))
+            //callback if promise is rejected, <=> then(null, failureCallback)
+            .catch(error => console.log(`Rejected: ${error}`))
+            //chainning callback then() after catch() will execute regardless of the result
+            .then(()=>console.log("Completed or not, build a project right now!"));
+        /*Important: Always return results before then(), otherwise callbacks won't catch the result of a previous promise*/
+
+        const firstHandler = (result) => result + " hihi";
+        const secondHandler = (result) => result + " haha";
+    </script>
+</body>
+
+</html>
